@@ -16,15 +16,12 @@ public class Comment {
         return author;
     }
 
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "text='" + text + '\'' +
-                ", author='" + author + '\'' +
-                '}';
-    }
-
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return this.author+":"+this.text;
     }
 }

@@ -1,6 +1,7 @@
 package services;
 
 import model.Comment;
+import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Service;
 
 import java.util.logging.Logger;
@@ -10,7 +11,7 @@ public class CommentService {
     private Logger logger = Logger.getLogger(CommentService.class.getName());
 
     public String publishComment(Comment comment) {
-        logger.info("publishing comment: "+comment.getText());
+        logger.info("Publishing Comment : "+comment.getText());
         return "SUCCESS";
     }
 }
