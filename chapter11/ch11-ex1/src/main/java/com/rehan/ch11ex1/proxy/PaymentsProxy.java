@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 @FeignClient(name = "payments" , url = "${name.service.url}")
 public interface PaymentsProxy {
-    @PostMapping("/payment")
+    @PostMapping("/")
     Payment createPayment(@RequestHeader String requestId, @RequestBody Payment payment);
 }
