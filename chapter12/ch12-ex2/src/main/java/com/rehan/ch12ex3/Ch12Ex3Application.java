@@ -1,13 +1,13 @@
-package com.rehan.ch12ex2;
+package com.rehan.ch12ex3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ch12Ex2Application {
+public class Ch12Ex3Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ch12Ex2Application.class, args);
+		SpringApplication.run(Ch12Ex3Application.class, args);
 	}
 
 }

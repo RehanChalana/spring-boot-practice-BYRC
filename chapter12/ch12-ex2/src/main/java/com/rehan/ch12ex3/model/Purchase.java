@@ -1,4 +1,4 @@
-package com.rehan.ch12ex2.model;
+package com.rehan.ch12ex3.model;
 
 import java.math.BigDecimal;
 

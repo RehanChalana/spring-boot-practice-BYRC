@@ -1,16 +1,18 @@
-package com.rehan.ch12ex2.repositories;
+package com.rehan.ch12ex3.repositories;
 
-import com.rehan.ch12ex2.model.Purchase;
-import java.util.List;
+import com.rehan.ch12ex3.model.Purchase;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
-public class PurchaseRepository {
+public class ProductRepository {
     private final JdbcTemplate jdbc;
-    public PurchaseRepository(JdbcTemplate jdbc) {
-      this.jdbc=jdbc;
+
+    public ProductRepository(JdbcTemplate jdbc) {
+        this.jdbc = jdbc;
     }
 
     public void storePurchase(Purchase purchase) {
@@ -18,7 +20,7 @@ public class PurchaseRepository {
         jdbc.update(sql,purchase.getProduct(),purchase.getPrice());
     }
 
-    public List<Purchase> findAllPurchase() {
+    public List<Purchase> findALlPurchases() {
         String sql = "SELECT * FROM purchase";
         RowMapper<Purchase> purchaseRowMapper = (r,i) -> {
             Purchase rowObject = new Purchase();
